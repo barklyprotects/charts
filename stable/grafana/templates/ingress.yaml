@@ -14,7 +14,7 @@ metadata:
     component: "{{ .Values.server.name }}"
     heritage: "{{ .Release.Service }}"
     release: "{{ .Release.Name }}"
-  name: {{ template "server.fullname" . }}
+  name: {{ template "grafana.server.fullname" . }}
 spec:
   rules:
   {{- range .Values.server.ingress.hosts }}

@@ -1,6 +1,6 @@
 {{- if .Values.server.ingress.enabled -}}
 {{- $releaseName := .Release.Name -}}
-{{- $serviceName := include "server.fullname" . }}
+{{- $serviceName := include "prometheus.server.fullname" . }}
 {{- $servicePort := .Values.server.service.servicePort -}}
 apiVersion: extensions/v1beta1
 kind: Ingress
@@ -15,7 +15,7 @@ metadata:
     component: "{{ .Values.server.name }}"
     heritage: {{ .Release.Service }}
     release: {{ .Release.Name }}
-  name: {{ template "server.fullname" . }}
+  name: {{ template "prometheus.server.fullname" . }}
 spec:
   rules:
   {{- range .Values.server.ingress.hosts }}
