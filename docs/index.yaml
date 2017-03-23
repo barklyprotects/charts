@@ -1,7 +1,7 @@
 apiVersion: v1
 entries:
   grafana:
-  - created: 2017-03-23T12:08:24.51063969-04:00
+  - created: 2017-03-23T12:16:39.470475124-04:00
     description: The leading tool for querying and visualizing time series and metrics.
     digest: c2d65fac6afbddbbc45250702604f5655e018296f6d6a1785b1639a7189e2f45
     engine: gotpl
@@ -16,4 +16,19 @@ entries:
     urls:
     - grafana-0.2.5+fork.tgz
     version: 0.2.5+fork
-generated: 2017-03-23T12:08:24.509664958-04:00
+  - created: 2017-03-23T12:16:39.471403914-04:00
+    description: The leading tool for querying and visualizing time series and metrics.
+    digest: 87b63df7c50670a5c577f17aef579a8836114531f7b887b7e4c4c903cc2c1206
+    engine: gotpl
+    home: https://grafana.net
+    icon: https://raw.githubusercontent.com/grafana/grafana/master/public/img/logo_transparent_400x.png
+    maintainers:
+    - email: zanhsieh@gmail.com
+      name: Ming Hsieh
+    name: grafana
+    sources:
+    - https://github.com/grafana/grafana
+    urls:
+    - grafana-0.2.5-fork.tgz
+    version: 0.2.5-fork
+generated: 2017-03-23T12:16:39.470046942-04:00
