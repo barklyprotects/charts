@@ -17,7 +17,7 @@ metadata:
     component: "{{ .Values.server.name }}"
     heritage: "{{ .Release.Service }}"
     release: "{{ .Release.Name }}"
-  name: {{ template "server.fullname" . }}
+  name: {{ template "grafana.server.fullname" . }}
 spec:
   accessModes:
 {{- range .Values.server.persistentVolume.accessModes }}

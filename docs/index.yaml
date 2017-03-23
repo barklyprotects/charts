@@ -1,7 +1,7 @@
 apiVersion: v1
 entries:
   grafana:
-  - created: 2017-03-23T11:49:32.490841811-04:00
+  - created: 2017-03-23T11:50:42.172210125-04:00
     description: The leading tool for querying and visualizing time series and metrics.
     digest: 4ff2acc85aa26fdea8cb47bd2cd15f70b80f019014b33b04021ff69b102dfbf6
     engine: gotpl
@@ -16,4 +16,4 @@ entries:
     urls:
     - grafana-0.2.5.1.tgz
     version: 0.2.5.1
-generated: 2017-03-23T11:49:32.489324114-04:00
+generated: 2017-03-23T11:50:42.17175078-04:00

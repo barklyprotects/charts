@@ -7,7 +7,7 @@ metadata:
     component: "{{ .Values.server.name }}"
     heritage: "{{ .Release.Service }}"
     release: "{{ .Release.Name }}"
-  name: {{ template "server.fullname" . }}
+  name: {{ template "grafana.server.fullname" . }}
 spec:
   replicas: 1
   template:
@@ -31,12 +31,12 @@ spec:
             - name: GF_SECURITY_ADMIN_USER
               valueFrom:
                 secretKeyRef:
-                  name: {{ template "server.fullname" . }}
+                  name: {{ template "grafana.server.fullname" . }}
                   key: grafana-admin-user
             - name: GF_SECURITY_ADMIN_PASSWORD
               valueFrom:
                 secretKeyRef:
-                  name: {{ template "server.fullname" . }}
+                  name: {{ template "grafana.server.fullname" . }}
                   key: grafana-admin-password
           ports:
             - containerPort: 3000
@@ -59,14 +59,14 @@ spec:
       volumes:
         - name: config-volume
           configMap:
-            name: {{ template "server.fullname" . }}-config
+            name: {{ template "grafana.server.fullname" . }}-config
         - name: dashboard-volume
           configMap:
-            name: {{ template "server.fullname" . }}-dashs
+            name: {{ template "grafana.server.fullname" . }}-dashs
         - name: storage-volume
       {{- if .Values.server.persistentVolume.enabled }}
           persistentVolumeClaim:
-            claimName: {{ template "server.fullname" . }}
+            claimName: {{ template "grafana.server.fullname" . }}
       {{- else }}
           emptyDir: {}
       {{- end -}}

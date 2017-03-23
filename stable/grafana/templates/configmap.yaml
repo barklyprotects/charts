@@ -7,6 +7,6 @@ metadata:
     component: "{{ .Values.server.name }}"
     heritage: "{{ .Release.Service }}"
     release: "{{ .Release.Name }}"
-  name: {{ template "server.fullname" . }}-config
+  name: {{ template "grafana.server.fullname" . }}-config
 data:
 {{ toYaml .Values.serverConfigFile | indent 2 }}
