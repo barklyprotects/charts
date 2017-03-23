@@ -1,8 +1,22 @@
 # Helm Charts - Barkly Fork
 
 Public forks of Charts will be kept here and release to /docs using the helm github plugin.
+```
+git submodule update
+cd plugins
+export HELM_HOME=$(helm home)
+make
+```
+----
 
-
+To release:
+```
+# From root of directory
+helm package stable/grafana
+helm github push grafana-0.2.5.1.tgz
+rm -rf grafana-0.2.5.1.tgz
+git commit....
+```
 
 
 
