@@ -38,6 +38,10 @@ spec:
                 secretKeyRef:
                   name: {{ template "grafana.server.fullname" . }}
                   key: grafana-admin-password
+          {{- range $key, $value := .Values.server.envs }}
+            - name: {{ $key }}
+              value: {{ $value | quote }}
+          {{- end }}
           ports:
             - containerPort: 3000
           readinessProbe:
