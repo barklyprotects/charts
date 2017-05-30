@@ -2,7 +2,7 @@ apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   labels:
-    app: {{ template "fullname" . }}
+    app: {{ template "grafana.fullname" . }}
     chart: "{{.Chart.Name}}-{{.Chart.Version}}"
     component: "{{ .Values.server.name }}"
     heritage: "{{ .Release.Service }}"
@@ -17,14 +17,14 @@ spec:
         {{ $key }}: {{ $value }}
       {{- end }}
       labels:
-        app: {{ template "fullname" . }}
+        app: {{ template "grafana.fullname" . }}
         component: "{{ .Values.server.name }}"
         release: "{{ .Release.Name }}"
     spec:
       nodeSelector:
 {{ toYaml .Values.server.nodeSelector | indent 12 }}
       containers:
-        - name: {{ template "name" . }}
+        - name: {{ template "grafana.name" . }}
           image: "{{ .Values.server.image }}"
           imagePullPolicy: {{ default "Always" .Values.server.imagePullPolicy }}
           env:
@@ -38,10 +38,13 @@ spec:
                 secretKeyRef:
                   name: {{ template "grafana.server.fullname" . }}
                   key: grafana-admin-password
-          {{- range $key, $value := .Values.server.envs }}
-            - name: {{ $key }}
-              value: {{ $value | quote }}
-          {{- end }}
+            {{- if .Values.server.installPlugins }}
+            - name: GF_INSTALL_PLUGINS
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ template "grafana.server.fullname" . }}-config
+                  key: grafana-install-plugins
+            {{- end }}
           ports:
             - containerPort: 3000
           readinessProbe:
@@ -70,7 +73,7 @@ spec:
         - name: storage-volume
       {{- if .Values.server.persistentVolume.enabled }}
           persistentVolumeClaim:
-            claimName: {{ template "grafana.server.fullname" . }}
+            claimName: {{ if .Values.server.persistentVolume.existingClaim }}{{ .Values.server.persistentVolume.existingClaim }}{{- else }}{{ template "grafana.server.fullname" . }}{{- end }}
       {{- else }}
           emptyDir: {}
       {{- end -}}
