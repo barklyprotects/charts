@@ -18,7 +18,12 @@ rm -rf grafana-0.2.5.1.tgz
 git commit....
 ```
 
-
+To use created charts:
+```
+helm repo add barkly-public https://barklyprotects.github.io/charts/
+helm install barkly-public/grafana
+```
+-------
 
 Use this repository to submit official Charts for Kubernetes Helm. Charts are curated application definitions for Kubernetes Helm. For more information about installing and using Helm, see its
 [README.md](https://github.com/kubernetes/helm/tree/master/README.md). To get a quick introduction to Charts see this [chart document](https://github.com/kubernetes/helm/blob/master/docs/charts.md).
