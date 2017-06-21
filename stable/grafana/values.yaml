@@ -14,6 +14,9 @@ server:
 
   nodeSelector: {}
 
+  envs:
+    GF_SERVER_ROOT_URL: grafana.test.com
+
   ingress:
     ## If true, Grafana Ingress will be created
     ##

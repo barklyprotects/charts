@@ -1,4 +1,29 @@
-# Helm Charts
+# Helm Charts - Barkly Fork
+
+Public forks of Charts will be kept here and release to /docs using the helm github plugin.
+```
+git submodule update
+cd plugins
+export HELM_HOME=$(helm home)
+make
+```
+----
+
+To release:
+```
+# From root of directory
+helm package stable/grafana
+helm github push grafana-0.2.5.1.tgz
+rm -rf grafana-0.2.5.1.tgz
+git commit....
+```
+
+To use created charts:
+```
+helm repo add barkly-public https://barklyprotects.github.io/charts/
+helm install barkly-public/grafana
+```
+-------
 
 Use this repository to submit official Charts for Kubernetes Helm. Charts are curated application definitions for Kubernetes Helm. For more information about installing and using Helm, see its
 [README.md](https://github.com/kubernetes/helm/tree/master/README.md). To get a quick introduction to Charts see this [chart document](https://github.com/kubernetes/helm/blob/master/docs/charts.md).
@@ -53,7 +78,7 @@ Note: We use the same [workflow](https://github.com/kubernetes/kubernetes/blob/m
 
 ## Review Process
 
-The following outlines the review procedure used by the Chart repository maintainers. Github labels are used to indicate state change during the review process. 
+The following outlines the review procedure used by the Chart repository maintainers. Github labels are used to indicate state change during the review process.
 
 * ***AWAITING REVIEW*** - Initial triage which indicates that the PR is ready for review by the maintainers team. The CLA must be signed and e2e tests must pass in-order to move to this state
 * ***CHANGES NEEDED*** - Review completed by at least one maintainer and changes needed by contributor (explicit even when using the review feature of Github)

@@ -1,0 +1,54 @@
+apiVersion: v1
+entries:
+  etcd-operator:
+  - apiVersion: v1
+    created: 2017-06-20T10:37:12.381625495-04:00
+    description: CoreOS etcd-operator Helm chart for Kubernetes
+    digest: b393e060e6817d89f9cc865d1bc1e9af155bc0c484ea139e0115beb740c13b6f
+    home: https://github.com/coreos/etcd-operator
+    icon: https://raw.githubusercontent.com/coreos/etcd/master/logos/etcd-horizontal-color.png
+    maintainers:
+    - email: chance.zibolski@coreos.com
+      name: chancez
+    - email: lachlan@deis.com
+      name: lachie83
+    name: etcd-operator
+    sources:
+    - https://github.com/coreos/etcd-operator
+    urls:
+    - etcd-operator-0.2.3.tgz
+    version: 0.2.3
+  - apiVersion: v1
+    created: 2017-06-20T10:37:12.381280812-04:00
+    description: CoreOS etcd-operator Helm chart for Kubernetes
+    digest: 6a86690fd66b75c21d29514ae3d1d5faf78bf4fc6460061ef0ed48efe2557fef
+    home: https://github.com/coreos/etcd-operator
+    icon: https://raw.githubusercontent.com/coreos/etcd/master/logos/etcd-horizontal-color.png
+    maintainers:
+    - email: chance.zibolski@coreos.com
+      name: chancez
+    - email: lachlan@deis.com
+      name: lachie83
+    name: etcd-operator
+    sources:
+    - https://github.com/coreos/etcd-operator
+    urls:
+    - etcd-operator-0.2.2.tgz
+    version: 0.2.2
+  grafana:
+  - created: 2017-06-20T10:37:12.382568236-04:00
+    description: The leading tool for querying and visualizing time series and metrics.
+    digest: ee5100e77d4dd6ec5a034d0e35b6caa0507763eddf35e22e59443ef53cded582
+    engine: gotpl
+    home: https://grafana.net
+    icon: https://raw.githubusercontent.com/grafana/grafana/master/public/img/logo_transparent_400x.png
+    maintainers:
+    - email: zanhsieh@gmail.com
+      name: Ming Hsieh
+    name: grafana
+    sources:
+    - https://github.com/grafana/grafana
+    urls:
+    - grafana-0.2.5-fork.tgz
+    version: 0.2.5-fork
+generated: 2017-06-20T10:37:12.380631185-04:00
