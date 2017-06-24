@@ -2,7 +2,25 @@ apiVersion: v1
 entries:
   etcd-operator:
   - apiVersion: v1
-    created: 2017-06-21T15:27:38.957908468-04:00
+    appVersion: 0.3.2
+    created: 2017-06-23T20:49:24.161985888-04:00
+    description: CoreOS etcd-operator Helm chart for Kubernetes
+    digest: e7f852ef33744f736b739fb35fe7e48a7a05a073ca4ec8d62fdcb02550606045
+    home: https://github.com/coreos/etcd-operator
+    icon: https://raw.githubusercontent.com/coreos/etcd/master/logos/etcd-horizontal-color.png
+    maintainers:
+    - email: chance.zibolski@coreos.com
+      name: chancez
+    - email: lachlan@deis.com
+      name: lachie83
+    name: etcd-operator
+    sources:
+    - https://github.com/coreos/etcd-operator
+    urls:
+    - etcd-operator-0.4.1.tgz
+    version: 0.4.1
+  - apiVersion: v1
+    created: 2017-06-23T20:49:24.161625593-04:00
     description: CoreOS etcd-operator Helm chart for Kubernetes
     digest: d3290b2cf955247d8e90d49c07fdc88c0d2f4a42a4348130fcd62c423c8d5dee
     home: https://github.com/coreos/etcd-operator
@@ -19,7 +37,7 @@ entries:
     - etcd-operator-0.3.0.tgz
     version: 0.3.0
   - apiVersion: v1
-    created: 2017-06-21T15:27:38.957568605-04:00
+    created: 2017-06-23T20:49:24.161064793-04:00
     description: CoreOS etcd-operator Helm chart for Kubernetes
     digest: b393e060e6817d89f9cc865d1bc1e9af155bc0c484ea139e0115beb740c13b6f
     home: https://github.com/coreos/etcd-operator
@@ -36,7 +54,7 @@ entries:
     - etcd-operator-0.2.3.tgz
     version: 0.2.3
   - apiVersion: v1
-    created: 2017-06-21T15:27:38.956715075-04:00
+    created: 2017-06-23T20:49:24.160542801-04:00
     description: CoreOS etcd-operator Helm chart for Kubernetes
     digest: 6a86690fd66b75c21d29514ae3d1d5faf78bf4fc6460061ef0ed48efe2557fef
     home: https://github.com/coreos/etcd-operator
@@ -53,7 +71,7 @@ entries:
     - etcd-operator-0.2.2.tgz
     version: 0.2.2
   grafana:
-  - created: 2017-06-21T15:27:38.958825515-04:00
+  - created: 2017-06-23T20:49:24.16243716-04:00
     description: The leading tool for querying and visualizing time series and metrics.
     digest: ee5100e77d4dd6ec5a034d0e35b6caa0507763eddf35e22e59443ef53cded582
     engine: gotpl
@@ -68,4 +86,4 @@ entries:
     urls:
     - grafana-0.2.5-fork.tgz
     version: 0.2.5-fork
-generated: 2017-06-21T15:27:38.955984022-04:00
+generated: 2017-06-23T20:49:24.159640631-04:00
