@@ -65,6 +65,10 @@ spec:
       nodeSelector:
 {{ toYaml .Values.alertmanager.nodeSelector | indent 8 }}
     {{- end }}
+      {{- if .Values.alertmanager.tolerations }}
+      tolerations:
+{{ toYaml .Values.alertmanager.tolerations | indent 8 }}
+      {{- end }}
       volumes:
         - name: config-volume
           configMap:

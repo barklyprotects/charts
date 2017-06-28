@@ -55,6 +55,10 @@ spec:
       nodeSelector:
 {{ toYaml .Values.nodeExporter.nodeSelector | indent 8 }}
     {{- end }}
+    {{- if .Values.nodeExporter.tolerations }}
+      tolerations:
+{{ toYaml .Values.nodeExporter.tolerations | indent 8 }}
+    {{- end }}
       volumes:
         - name: proc
           hostPath:

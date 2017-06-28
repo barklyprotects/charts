@@ -48,6 +48,11 @@ alertmanager:
   ##
   nodeSelector: {}
 
+  ## Node tolerations for alertmanager
+  ## Ref: https://kubernetes.io/docs/user-guide/node-selection/
+  ##
+  tolerations: {}
+
   persistentVolume:
     ## If true, alertmanager will create/use a Persistent Volume Claim
     ## If false, use emptyDir
@@ -162,6 +167,11 @@ kubeStateMetrics:
   ##
   nodeSelector: {}
 
+  ## Node tolerations for alertmanager
+  ## Ref: https://kubernetes.io/docs/user-guide/node-selection/
+  ##
+  tolerations: {}
+
   ## Annotations to be added to kube-state-metrics pods
   ##
   podAnnotations: {}
@@ -228,6 +238,11 @@ nodeExporter:
   ## Ref: https://kubernetes.io/docs/user-guide/node-selection/
   ##
   nodeSelector: {}
+
+  ## Node tolerations for alertmanager
+  ## Ref: https://kubernetes.io/docs/user-guide/node-selection/
+  ##
+  tolerations: {}
 
   ## Annotations to be added to node-exporter pods
   ##
@@ -318,6 +333,11 @@ server:
   ## Node labels for Prometheus server pod assignment
   ## Ref: https://kubernetes.io/docs/user-guide/node-selection/
   nodeSelector: {}
+
+  ## Node tolerations for alertmanager
+  ## Ref: https://kubernetes.io/docs/user-guide/node-selection/
+  ##
+  tolerations: {}
 
   persistentVolume:
     ## If true, Prometheus server will create/use a Persistent Volume Claim
