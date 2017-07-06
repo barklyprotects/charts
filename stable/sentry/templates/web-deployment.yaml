@@ -61,6 +61,16 @@ spec:
             secretKeyRef:
               name: {{ template "fullname" . }}
               key: smtp-password
+        - name: "GOOGLE_CLIENT_ID"
+          valueFrom:
+            secretKeyRef:
+              name: {{ template "fullname" . }}
+              key: google-clientid
+        - name: "GOOGLE_CLIENT_SECRET"
+          valueFrom:
+            secretKeyRef:
+              name: {{ template "fullname" . }}
+              key: google-secret
         volumeMounts:
         - mountPath: {{ .Values.persistence.filestore_dir }}
           name: sentry-data

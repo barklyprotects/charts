@@ -1,3 +1,4 @@
+{{- if .Values.userCreate.enabled }}
 apiVersion: batch/v1
 kind: Job
 metadata:
@@ -69,3 +70,4 @@ spec:
             secretKeyRef:
               name: {{ template "fullname" . }}
               key: user-password
+{{ end }}
