@@ -3,7 +3,7 @@ entries:
   etcd-operator:
   - apiVersion: v1
     appVersion: 0.3.2
-    created: 2017-07-06T15:43:55.955000911-04:00
+    created: 2017-07-06T15:51:14.216770923-04:00
     description: CoreOS etcd-operator Helm chart for Kubernetes
     digest: e7f852ef33744f736b739fb35fe7e48a7a05a073ca4ec8d62fdcb02550606045
     home: https://github.com/coreos/etcd-operator
@@ -20,7 +20,7 @@ entries:
     - etcd-operator-0.4.1.tgz
     version: 0.4.1
   - apiVersion: v1
-    created: 2017-07-06T15:43:55.954319609-04:00
+    created: 2017-07-06T15:51:14.216429136-04:00
     description: CoreOS etcd-operator Helm chart for Kubernetes
     digest: d3290b2cf955247d8e90d49c07fdc88c0d2f4a42a4348130fcd62c423c8d5dee
     home: https://github.com/coreos/etcd-operator
@@ -37,7 +37,7 @@ entries:
     - etcd-operator-0.3.0.tgz
     version: 0.3.0
   - apiVersion: v1
-    created: 2017-07-06T15:43:55.95357742-04:00
+    created: 2017-07-06T15:51:14.216121071-04:00
     description: CoreOS etcd-operator Helm chart for Kubernetes
     digest: b393e060e6817d89f9cc865d1bc1e9af155bc0c484ea139e0115beb740c13b6f
     home: https://github.com/coreos/etcd-operator
@@ -54,7 +54,7 @@ entries:
     - etcd-operator-0.2.3.tgz
     version: 0.2.3
   - apiVersion: v1
-    created: 2017-07-06T15:43:55.953063832-04:00
+    created: 2017-07-06T15:51:14.215796294-04:00
     description: CoreOS etcd-operator Helm chart for Kubernetes
     digest: 6a86690fd66b75c21d29514ae3d1d5faf78bf4fc6460061ef0ed48efe2557fef
     home: https://github.com/coreos/etcd-operator
@@ -71,7 +71,7 @@ entries:
     - etcd-operator-0.2.2.tgz
     version: 0.2.2
   grafana:
-  - created: 2017-07-06T15:43:55.955617115-04:00
+  - created: 2017-07-06T15:51:14.217201223-04:00
     description: The leading tool for querying and visualizing time series and metrics.
     digest: ee5100e77d4dd6ec5a034d0e35b6caa0507763eddf35e22e59443ef53cded582
     engine: gotpl
@@ -87,7 +87,7 @@ entries:
     - grafana-0.2.5-fork.tgz
     version: 0.2.5-fork
   prometheus:
-  - created: 2017-07-06T15:43:55.956661531-04:00
+  - created: 2017-07-06T15:51:14.217851344-04:00
     description: Prometheus is a monitoring system and time series database.
     digest: 3f5d1d545d0a4b58e2f6873d56e011db57cddf894021344caccd896afca5ef5b
     engine: gotpl
@@ -106,9 +106,9 @@ entries:
     version: 3.0.3
   sentry:
   - apiVersion: v1
-    created: 2017-07-06T15:43:55.957510786-04:00
+    created: 2017-07-06T15:51:14.219692174-04:00
     description: Sentry is a cross-platform crash reporting and aggregation platform.
-    digest: 9d2b0e2290e6ca436fc3e66f10c36402e971baf2a4121e73df52b6544fe27475
+    digest: e57ad206564f853ac51d47b93ddc8a7d2eed69d547d6a07763ea12eaf9e9331b
     home: https://sentry.io/
     icon: https://sentry.io/_static/getsentry/images/branding/png/sentry-glyph-black.png
     keywords:
@@ -123,4 +123,4 @@ entries:
     urls:
     - sentry-0.1.0+barkly.tgz
     version: 0.1.0+barkly
-generated: 2017-07-06T15:43:55.952468125-04:00
+generated: 2017-07-06T15:51:14.215238509-04:00
