@@ -1,19 +1,9 @@
 dependencies:
-- alias: ""
-  condition: ""
-  enabled: false
-  import-values: null
-  name: postgresql
+- name: postgresql
+  repository: https://barklyprotects.github.io/charts
+  version: 0.8.2-tolerations
+- name: redis
   repository: https://kubernetes-charts.storage.googleapis.com/
-  tags: null
-  version: 0.7.1
-- alias: ""
-  condition: ""
-  enabled: false
-  import-values: null
-  name: redis
-  repository: https://kubernetes-charts.storage.googleapis.com/
-  tags: null
   version: 0.6.0
-digest: sha256:d4d1f0703857e44bcf635345a9758d3437700ad09c8fdc4bbff140638f46b37c
-generated: 2017-07-05T16:02:13.122533609-04:00
+digest: sha256:bbb0eabda192015f56e7aaea63c46a8fd5b4d356134f1aed60346289fcd25b49
+generated: 2017-08-24T14:50:49.005680206-04:00
