@@ -3,5 +3,5 @@ dependencies:
     version: 0.8.2-tolerations
     repository: https://barklyprotects.github.io/charts
   - name: redis
-    version: 0.6.0
+    version: 0.8.0
     repository: https://kubernetes-charts.storage.googleapis.com/
